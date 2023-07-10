@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="NIKE favicon.png"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Home</title>
+    <style>
+        body {
+            font-family: 'Oswald';
+
+        }
+
+        /* Hero Section */
+        img {
+            display: block; 
+            max-width: 100%; 
+            height: auto; 
+        }
+
+        h1 {
+            font-weight: bold;
+            color: black;
+        } 
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+        } 
+
+        footer {
+            color: white;
+            height: 110px;
+        }  
+
+        .pfooter {
+            font-family: 'Roboto Slab';
+        }             
+
+        /* Hide transition on navigation bar */
+        .navbar {
+            font-size: 18px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 2147483647;            
+            transition: top 0.3s ease-in-out;
+        }
+
+        .hide {
+            top: -100px;
+
+        }
+
+        /* Hover effect on menu button */
+        .navbar-toggler-icon:hover {
+            transform: scale(1.1);
+        } 
+
+        /* Logo */
+        .logo {
+            width: 66px;
+            display: block;
+            margin: 10px;
+           
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* Hero Section */
+        .herosection1 {
+            background-image: url('herosection - 1.jpg');
+            background-size: cover;
+            color: #fff;
+            border-radius: 30px;
+            image-rendering: optimizeQuality;
+            padding: 400px;
+            display: flex;
+        }
+
+        .container {
+            margin: 0 auto; 
+            max-width: 1850px; 
+            padding: 0 10px; 
+        }         
+        
+
+        .herosection3 {
+            background-image: url('herosection - 3.jpg');
+            background-size: cover;
+            color: #fff;
+            border-radius: 0px;
+            padding: 400px;
+            display: flex;
+        }
+
+        #about,
+        #featured
+        #call-to-action {
+            margin-top: 50px;
+        }
+
+        .card-columns.card {
+            margin-bottom: 20px;
+        }  
+
+
+        /* Responsive card */
+
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            flex
+        }
+
+        .card {
+            flex: 1;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        /* Brand Statement */
+        .brandstatement {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }        
+
+        .custom-paragraph {
+            font-family: 'Oswald';
+            font-size: 60px;
+            font-weight: bold;
+            color: black;
+            display: block;
+            margin-left:auto;
+            margin-right: auto;
+            display: block;
+            text-align:center;
+        }       
+
+        /* Product Hover */
+        .product-zoom {
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+        }
+
+        .product-zoom:hover {
+            transform: scale(1.1);
+            z-index: 9999;
+            transition-delay: 0.5s;
+        }        
+
+        /* Click Me! Buton */
+        .click-me-btn {
+            display: inline-flex;
+            padding: 12px;       
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 10px; 
+        }
+
+        .click-me-btn:hover {
+        text-decoration: none;
+        }
+
+        /* Responsive Web */
+        @media (max-width: 768px) {
+            .card-deck .card {
+            width: 100%;
+            max-width: none;
+        }
+
+        .custom-paragraph {
+            font-family: 'Oswald';
+            font-size: 30px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src ="NIKE LOGO.png" alt="Nike Logo" class="logo" href="index.html">
+        </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Products/Services</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Homepage -->
+
+    <div class="container">
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <img src="herosection - 1.jpg" alt="Image">
+        <br>
+        <img src="herosection - 2.jpg" alt="Image">
+        <br>
+        <img src="herosection - 3.jpg" alt="Image">
+
+    </div>
+
+    <!-- About page -->
+    <section id="about" class="brandstatement">
+        <p class="custom-paragraph">" To bring inspiration and innovation to every athlete* in the world.
+        <br>*If you have a body, you are an athlete. ”
+        </p>
+    </section>
+
+    <!-- Products/Services page -->
+    <section id="featured" class="container">
+        <br><br><br><h1>Featured Products</h1><br>
+        <div class="card-columns">    
+            <div class="card product-zoom">
+                <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7e7bf530-dbd5-4351-b1b7-c9e9633a27bc/jordan-pro-jumpman-snapback-hat-KbPBND.png" alt="Product 1">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Jordan Pro Jumpman 'Snapback Hat'</h4></b>
+                    <hr>
+                    <p class="card-text">Show them your hops in the Jordan Pro Jumpman Snapback Hat. It has a flat bill and high structured crown made from tightly woven twill. The iconic logo is thickly embroidered on the front, a bold projection of the Brand's heritage. This product is made from at least 50% recycled polyester fibres.<br><br></p>
+                    <a href="https://www.nike.com/ph/t/jordan-pro-jumpman-snapback-hat-KbPBND/AR2118-688" target="_blank" class="btn btn-danger">Learn More</a>
+                </div>
+            </div>
+            <div class="card product-zoom">
+                <img class="card-img-top" src="https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/4e46bd9c-791f-4a81-8899-c6860bb8de08/air-jordan-1-next-chapter-dv1748-601-release-date.jpg" alt="Product 2">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Air Jordan 1 'Next Chapter'</h4></b>
+                    <hr>
+                    <p class="card-text">You don't need a cape to take flight—just your AJ1s. You know, the ones seen on Miles in "Spider-Man: Across the Spider-Verse", exclusively in cinemas on 31 May. This fresh take on the iconic Chicago colourway boasts a mix of materials, including lustrous leather and soft suede. The world is waiting, so step on in.<br><br><br><br><br></p>
+                    <a href="https://www.nike.com/ph/launch/t/air-jordan-1-next-chapter" target="_blank" class="btn btn-danger">Learn More</a>
+                </div>
+            </div>              
+            <div class="card product-zoom">
+                <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7feabe43-c08c-4e32-bb19-d1fab0615fee/sportswear-oversized-t-shirt-ptNVST.png" alt="Product 3">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Nike Sportswear 'Oversized T-Shirt'</h4></b>
+                    <hr>
+                    <p class="card-text">Time to elevate your T-shirt collection? This tee answers the call. Heavyweight cotton and a clean, embroidered Futura logo keep it simple for pairing up with any outfit. The oversize fit gives you plenty of extra space for casual style and easy layering.<br><br></p>
+                    <a href="https://www.nike.com/ph/t/sportswear-oversized-t-shirt-ptNVST/FB9767-010" target="_blank" class="btn btn-danger">Learn More</a>
+                </div>
+            </div>                     
+            <div class="card product-zoom">
+                <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0f28a4c2-ddc1-4ff5-8239-84ddf45882bf/solo-swoosh-french-terry-trousers-gpkcLc.png" alt="Product 4">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Nike Solo Swoosh 'French Terry Trousers</h4></b>
+                    <hr>
+                    <p class="card-text">These soft fleece trousers are made for comfort and laid-back, nostalgic style. They're roomy through the seat and thighs, then slightly taper to the cuffed ankle. A soft elastic waistband and inner drawcord keep them comfy where it counts. The embroidered Swoosh on the left thigh gives you a clean, effortless finish.<br><br></p>
+                    <a href="https://www.nike.com/ph/t/solo-swoosh-french-terry-trousers-gpkcLc/DX0816-010" target="_blank" class="btn btn-danger">Learn More</a>
+                </div>
+            </div>                 
+            <div class="card product-zoom">
+                <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/58cda43a-c817-4afe-a5a9-4a8070b42704/heritage-cross-body-bag-H57GpC.png" alt="Product 5">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Nike Heritage 'Cross-Body Bag'</h4></b>
+                    <hr>
+                    <p class="card-text">An alternative to the classic hip pack style, the Nike Heritage Cross-Body Bag offers hands-free storage in a design you wear across the chest. A Futura logo print and easy-to-adjust strap make it a smart pick for everyday use. The main storage pocket and accessories pocket help keep your gear organised. This product is made from at least 65% recycled polyester.</p>
+                    <a href="https://www.nike.com/ph/t/heritage-cross-body-bag-H57GpC/DB0456-010" target="_blank" class="btn btn-danger">Learn More</a>
+                </div>
+            </div> 
+            <div class="card product-zoom">
+                <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d4d81775-49ee-456e-9d2f-2566fe4ebd3d/dri-fit-totality-23cm-unlined-shorts-m2W9jx.png" alt="Product 6">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Nike Dri-FIT Totality 'Unlined Shorts'</h4></b>
+                    <hr>
+                    <p class="card-text">Designed for training, our sweat-wicking Totality Shorts let you keep things simple and fresh. They have a relaxed fit with smooth fabric that offers up comfort whether you're doing reps at the gym or following your favourite workout at home.<br><br><br></p>
+                    <a href="https://www.nike.com/ph/t/dri-fit-totality-23cm-unlined-shorts-m2W9jx/DV9329-010" target="_blank" class="btn btn-danger">Learn More</a>
+                </div>
+            </div>                                                  
+        </div>
+    </section>
+
+    <section id="call-to-action">
+        <br>
+        <p class="custom-paragraph">Shop now to unleash your potential!</p>
+
+        <div style="display: flex; justify-content: center;">    
+            <a href="products.html" target="_blank" class="click-me-btn btn btn-danger">Click Me</a>
+        </div>
+        <br>
+        <br>
+    </section>
+
+    <div class="ball"></div>
+
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark">
+        <p class="pfooter">Villafuerte, Brylle - [FINAL] Final Project | IT0043L</p>
+        <p class="pfooter">&copy; 2023 Nike, Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Hide transition on navigation bar
+        var previousScroll = window.pageYOffset || document.documentElement.scrollTop;
+        var nav = document.querySelector('nav');
+        var navbarToggler = document.querySelector('.navbar-toggler');
+        var navMenu = document.querySelector('.navbar-collapse');
+
+        window.addEventListener('scroll', function() {
+            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > previousScroll) {
+                nav.style.top = '-100px';
+                navMenu.classList.remove('show'); // Hide the navigation menu
+            } else {
+                nav.style.top = '0';
+            }
+            previousScroll = currentScroll;
+        });
+
+        navbarToggler.addEventListener('click', function() {
+            if (!navMenu.classList.contains('show') && window.pageYOffset > 0) {
+                nav.style.top = '-100px';
+            }
+        }); 
+    </script>
+</body>
+</html>

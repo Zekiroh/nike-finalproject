@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="NIKE favicon.png"/> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>  
+    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Products/Services</title>
+    <style>
+        body {
+            font-family: 'Oswald';
+        }
+
+        /* Header 6 */
+        p {
+            font-family: Arial, Helvetica, sans-serif; 
+        }
+
+        footer {
+            color: white;
+            height: 110px;
+        }
+
+        .pfooter {
+            font-family: 'Roboto Slab';
+        }
+
+        h1 {
+            font-size: 80px;
+        }         
+
+        /* Hide transition on navigation bar */
+        .navbar{
+            font-size: 18px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 2147483647;
+            transition: top 0.3s ease-in-out;
+        }
+
+        .hide {
+            top: -100px;
+        }
+
+        /* Hover effect on menu button */
+        .navbar-toggler-icon:hover {
+            transform: scale(1.1);
+           
+        }
+
+        /* Logo */
+        .logo {
+            width: 66px;
+            display: block;
+            margin: 10px;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        /* Sections */
+        .jumbotron {
+            background-image: url('Background.png');
+            background-size: contain;
+            margin-top: 120px;
+            color: #fff;
+        }
+
+        #products {
+            margin-top: 50px;
+        }
+
+        .card-columns.card {
+            margin-bottom: 20px;
+        }
+
+        /* Responsive card */
+
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            flex
+        }
+
+        .card {
+            flex: 1;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        /* Product Hover */
+        .product-zoom {
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+        }
+
+        .product-zoom:hover {
+            transform: scale(1.1);
+            z-index: 9999;
+            transition-delay: 0.5s;
+        }        
+
+        /* Air Jordan 1 Low 'Black Toe' */
+
+        .card.custom-jcard .jcard-text{                   
+            height: 307.5px;
+            box-sizing: border-box;
+        }
+
+        /* Jordan Flight Essentials 'Oversized T-Shirt' */
+
+        .card.custom-tcard .tcard-text{                   
+            height: 140px;
+            box-sizing: border-box;
+        }    
+
+        /* Nike Solo Swoosh 'French Terry Trousers' */
+
+        .card.custom-fcard .fcard-text{                   
+            height: 212px;
+            box-sizing: border-box;
+        }  
+
+        /* Jordan Flight Fleece 'Shorts' */
+
+        .card.custom-scard .scard-text{                   
+            height: 197px;
+            box-sizing: border-box;
+        }   
+
+        /* Nike Basketball Essentials 'Cross-Body Bag' */
+
+        .card.custom-bcard .bcard-text{                   
+            height: 188px;
+            box-sizing: border-box;
+        }  
+
+        /* Jordan Pro Jumpman 'Snapback Hat' */
+
+        .card.custom-pcard .pcard-text{                   
+            height: 188px;
+            box-sizing: border-box;
+        }              
+
+        /* Jordan 'Everyday Ankle Socks' */
+
+        .card.custom-ecard .ecard-text{                   
+            height: 245px;
+            box-sizing: border-box;
+        }  
+
+        /* See More Button */
+        .see-more-btn {
+            display: inline-flex;
+            padding: 12px;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 30px; 
+        }
+
+        .see-more-btn:hover {
+        text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">
+        <img src="NIKE LOGO.png" alt="Nike Logo" class="logo" href="index.html">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Products/Services
+                </a>
+                <div class="dropdown-menu" aria-labelledby="productsDropdown">
+                    <a class="dropdown-item" href="products.html#products_shoes" id ="shoes">Shoes</a>
+                    <a class="dropdown-item" href="products.html#products_clothing" id ="clothing">Clothing</a>
+                    <a class="dropdown-item" href="products.html#products_accessories" id ="accessories">Accessories</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>    
+
+    <!-- Shoes -->
+    <section id="products_shoes" class="container">
+        <div class="jumbotron text-center">
+            <h1>Shoes</h1>
+        </div>
+        <div class="container">
+            <div class="card-columns">
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/31ff59e2-89d0-4a83-839a-656618674782/air-jordan-1-mid-mens-shoes-tXSJ73.png" alt="Product 1 Image">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Air Jordan 1 Mid</h4></b>
+                        <hr>
+                        <p class="card-text">Inspired by the original AJ1, this mid-top edition maintains the iconic style we all love, but features a range of colors and crisp leather to express our individuality.<br><br><br><br><br></p>
+                        <a href="https://www.nike.com/t/air-jordan-1-mid-mens-shoes-tXSJ73/DQ8426-106" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>
+                <div class="card custom-jcard product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/sap0rvgvedj1fk7gfqea/air-jordan-1-low-gym-red-release-date.jpg" alt="Product 2">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Air Jordan 1 Low 'Black Toe'</h4></b>
+                        <hr>
+                        <p class="jcard-text">Inspired by the original that debuted in 1985, the Air Jordan 1 Low offers a clean, classic look that's familiar yet always fresh. It's made for casual mode, with an iconic design that goes with everything and never goes out of style. An encapsulated Air-Sole unit provides lightweight cushioning. Genuine leather in the upper offers durability and a premium look. A solid-rubber outsole enhances traction on a variety of surfaces.<div class="custom-line-spacing"></div></p>
+                        <a href="https://www.nike.com/ph/launch/t/air-jordan-1-low-gym-red" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c2ded0e8-37f3-4149-a75e-49cd15f8f5f2/defy-all-day-training-shoe-LtD2G1.png" alt="Product 3">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Defy All Day</h4></b>
+                        <hr>
+                        <p class="card-text">Take on everyday challenges in the Nike Defy All Day. Leather up top and rubber traction on the bottom create a durable design that lasts the rigours of tough training sessions. Soft cushioning carries comfort through your workout—or a day of getting things done.</p>
+                        <a href="https://www.nike.com/ph/t/defy-all-day-training-shoe-LtD2G1/DJ1196-101" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b7d9211c-26e7-431a-ac24-b0540fb3c00f/air-force-1-07-shoes-WrLlWX.png" alt="Product 4">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Air Force 1 '07</h4></b>
+                        <hr>
+                        <p class="card-text">The radiance lives on in the Nike Air Force 1 '07, the basketball original that puts a fresh spin on what you know best: durably stitched overlays, clean finishes and the perfect amount of flash to make you shine.<br><br><br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/air-force-1-07-shoes-WrLlWX/CW2288-111" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div> 
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/4371ac31-97cd-4057-bd6e-41440e39f3b9/%EB%8D%A9%ED%81%AC-%EB%A1%9C%EC%9A%B0-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-yEYxnb4N.png" alt="Product 5">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Dunk Low</h4></b>
+                        <hr>
+                        <p class="card-text">The Nike Dunk Low is an easy-to-grow style accessory. The mid-'80s basketball icon is back with durable construction and original colours. With ankle padding and rubber traction, it is undoubtedly a great shoe.<br><br></p>
+                        <a href="https://www.nike.com/kr/t/%EB%8D%A9%ED%81%AC-%EB%A1%9C%EC%9A%B0-%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%8B%A0%EB%B0%9C-yEYxnb4N/CW1590-100" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                               
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/99261e1b-d7a9-4912-9976-4ca516f1724e/jordan-stay-loyal-2-shoes-sDkgDk.png" alt="Product 6">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Jordan Stay Loyal 2</h4></b>
+                        <hr>
+                        <p class="card-text">Inspired by generations of Js, these kicks are a collage of cool. Design details recall decades of legendary shoes while paying homage to MJs storied career. Breathable mesh, sturdy leather and lightweight Air cushioning in the heel make it that much easier to walk in the footsteps of greatness.</p>
+                        <a href="https://www.nike.com/ph/t/jordan-stay-loyal-2-shoes-sDkgDk/DQ8401-016" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ef1e219e-19b8-4a45-8056-2fff013230d8/air-flight-lite-mid-shoes-sFr84z.png" alt="Product 7">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Air Flight Lite Mid</h4></b>
+                        <hr>
+                        <p class="card-text">Take a trip down crossover lane with the Nike Air Flight Lite Mid, the '90s hoops shoe that ruled both the b-ball court and the big screen.Originally one of the lightest hoops shoes upon release, it's got all-over perforations and velvety material for a little extra flash.The ultra-plush collar and Air cushioning keep it comfortable no matter where you go.<br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/air-flight-lite-mid-shoe-GrnpgF/DJ2518-101" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>  
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/84f9d628-19dc-4749-8d37-59dc734fdbcd/air-max-90-g-golf-shoes-7lhz4H.png" alt="Product 8">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Air Max 90 G</h4></b>
+                        <hr>
+                        <p class="card-text">The original Nike Air Max 90 was renowned for its clean lines and timeless style. The Nike Air Max 90 G stays true to the icon with a few updates made for golf, like integrated traction and a thin overlay that helps keep out water.<br><br></p>
+                        <a href="https://www.nike.com/ph/t/air-max-90-g-golf-shoes-7lhz4H/DX5999-162" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/8bf8448b-1595-4ad8-b872-3aaa5cc489f0/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-sc-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-xMi274Fu.png" alt="Product 9">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Air Max SC</h4></b>
+                        <hr>
+                        <p class="card-text">Featuring relaxed lines and a heritage track look, the Nike Air Max SC features transparent air cushioning to complete any look. The blended material adds depth and is lightweight and durable for everyday wear.<br><br><br><br></p>
+                        <a href="https://www.nike.com/kr/t/%EC%97%90%EC%96%B4%EB%A7%A5%EC%8A%A4-sc-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-xMi274Fu/CW4555-102" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                                                                                              
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/defc6d77-9163-4e9b-aad3-415d1df89a8a/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EB%A1%9C%EC%9A%B0-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-a90z6F77.png" alt="Product 10">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Air Jordan 1 Low</h4></b>
+                        <hr>
+                        <p class="card-text">Continuing the sensibility of the original released in 1985, the Air Jordan 1 Low presents a clean classic look that is familiar yet fresh. These sneakers with an iconic design that go perfectly with any outfit create a stylish look at all times.<br><br></p>
+                        <a href="https://www.nike.com/kr/t/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EB%A1%9C%EC%9A%B0-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-a90z6F77/553558-052" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>  
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ca4c3078-7982-4c62-b85f-15bbd34794a0/air-jordan-6-retro-shoes-4m3b9d.png" alt="Product 11">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Air Jordan 6 Retro</h4></b>
+                        <hr>
+                        <p class="card-text">MJ's sixth signature shoe debuted during the 1990–1991 season as His Airness battled rivals in pursuit of an elusive first championship.Now, it's back in a variety of colour schemes.Gear up for the 30th anniversary of the Air Jordan 6 with this timeless classic.<br><br></p>
+                        <a href="https://www.nike.com/ph/t/air-jordan-6-retro-shoes-4m3b9d/CT8529-600" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a4fe47a4-6eaf-4df6-9684-9586e1a2596e/jumpman-mvp-shoes-JV1HCs.png" alt="Product 12">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Jumpman MVP</h4></b>
+                        <hr>
+                        <p class="card-text">We didn't invent the remix—but considering the material we get to sample, this one's a no-brainer. We fired up the SP-12 and took elements from the AJ6, 7 and 8, making them into a completely new shoe that celebrates MJ's first 3-peat championship run. With leather, textile and nubuck details, these sneakers honour one legacy while encouraging you to cement your own.<br><br></p>
+                        <a href="https://www.nike.com/ph/t/jumpman-mvp-shoes-JV1HCs/DZ4475-006" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/28f90b46-2cdd-4738-9080-cd64314f3cd7/air-jordan-legacy-312-low-shoes-6Vd4Xl.png" alt="Product 13">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Air Jordan Legacy 312 Low</h4></b>
+                        <hr>
+                        <p class="card-text">The Air Jordan Legacy 312 Low celebrates Michael Jordan's legacy with this shout-out to Chicago's 312 area code. The design creates a modern mash-up of iconic Jordan elements.<br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/air-jordan-legacy-312-low-shoes-6Vd4Xl/CD7069-160" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7683c588-e0f5-46b9-9382-ef6ec80db821/jordan-stadium-90-shoes-Jn6ZH4.png" alt="Product 14">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Jordan Stadium 90</h4></b>
+                        <hr>
+                        <p class="card-text">Comfort is king, but that doesn't mean you have to sacrifice style. Taking design inspiration from the AJ1 and AJ5, the Stadium 90 is ready for everyday wear. The upper is made from leather and airy woven, so you get both breathability and durability, and Nike Air cushioning in the sole keeps your every step light and cushioned.</p>
+                        <a href="https://www.nike.com/ph/t/jordan-stadium-90-shoes-Jn6ZH4/DX4397-106" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ca21e70f-9c83-46dd-9974-b3b55b0b9dc0/air-pegasus-89-shoes-BwcVd8.png" alt="Product 15">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Air Pegasus '89C</h4></b>
+                        <hr>
+                        <p class="card-text">The Nike Air Pegasus '89 resurrects a look that's as fresh as the era it came from. With suede overlays, a hidden Air unit and a Waffle outsole, this street-ready edition of the Pegasus blends retro style with modern comfort.<br><br></p>
+                        <a href="https://www.nike.com/ph/t/air-pegasus-89-shoes-BwcVd8/FD3598-002" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                                                                                                                                                      
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: center;">    
+            <a href="https://www.nike.com/ph/w/shoes-y7ok" target="_blank" class="see-more-btn btn btn-danger">See More...</a>
+        </div>
+
+    </section>
+
+    <!-- Clothing -->
+    <section id="products_clothing" class="container">
+        <div class="jumbotron text-center">
+            <h1>Clothing</h1>
+        </div>
+        <div class="container">
+            <div class="card-columns">
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7feabe43-c08c-4e32-bb19-d1fab0615fee/sportswear-oversized-t-shirt-ptNVST.png" alt="Product 16">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Sportswear 'Oversized T-shirt'</h4></b>
+                        <hr>
+                        <p class="card-text">Time to elevate your T-shirt collection? This tee answers the call. Heavyweight cotton and a clean, embroidered Futura logo keep it simple for pairing up with any outfit. The oversize fit gives you plenty of extra space for casual style and easy layering.</p>
+                        <a href="https://www.nike.com/ph/t/sportswear-oversized-t-shirt-ptNVST/FB9767-030" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                             
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ed05e04d-f4d1-49c4-9860-69a6dca841df/solo-swoosh-french-terry-pullover-hoodie-k5q1Qr.png" alt="Product 17">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Solo Swoosh 'French Terry Pullover Hoodie'</h4></b>
+                        <hr>
+                        <p class="card-text">This warm fleece hoodie is made with some extra room through the shoulders, chest and body for easy comfort and laid-back, nostalgic style. The thick, stretchy ribbing on the cuffs and hem help hold the hoodie in place and give a premium feel. Our solo Swoosh is embroidered on the left chest to keep your look clean and effortless.</p>
+                        <a href="https://www.nike.com/ph/t/solo-swoosh-french-terry-pullover-hoodie-k5q1Qr/DX0814-010" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/795cfd3a-15ca-477b-8650-2c37facb9f8e/jordan-flight-mvp-trousers-Xx1867.png" alt="Product 18">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Jordan Flight MVP 'Trousers'</h4></b>
+                        <hr>
+                        <p class="card-text">Check the signature: these trousers are authorised by MJ himself. Made of lightweight woven material with minimal flair—like low-key branding and unique stitching—these trousers could be the everyday pair you're looking for.<br><br><br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/jordan-flight-mvp-trousers-Xx1867/DX9740-045" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                                                                               
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/01642de0-d41f-443a-a110-6b605e718c49/solo-swoosh-french-terry-shorts-s0LVln.png" alt="Product 19">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Solo Swoosh 'French Terry Shorts'</h4></b>
+                        <hr>
+                        <p class="card-text">These soft fleece shorts are made for comfort and laid-back, nostalgic style. Designed to fit above the knee, they're roomy through the seat and thighs while the stretchy encased elastic waist keeps them comfy where it counts. The embroidered Swoosh on the left thigh gives you a clean, effortless finish.</p>
+                        <a href="https://www.nike.com/ph/t/solo-swoosh-french-terry-shorts-s0LVln/DX0818-030" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d4d81775-49ee-456e-9d2f-2566fe4ebd3d/dri-fit-totality-23cm-unlined-shorts-m2W9jx.png" alt="Product 20">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Dri-FIT Totality 'Unlined Shorts'</h4></b>
+                        <hr>
+                        <p class="card-text">Designed for training, our sweat-wicking Totality Shorts let you keep things simple and fresh. They have a relaxed fit with smooth fabric that offers up comfort whether you're doing reps at the gym or following your favourite workout at home.<br><br></p>
+                        <a href="https://www.nike.com/ph/t/dri-fit-totality-23cm-unlined-shorts-m2W9jx/DV9329-010" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/84f873df-42aa-4bb7-9038-e10dd54e78f2/sb-logo-skate-t-shirt-LBBxZV.png" alt="Product 21 Image">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike SB 'Logo Skate T-Shirt'</h4></b>
+                        <hr>
+                        <p class="card-text">Made from soft jersey fabric, the Nike SB T-Shirt is a skate staple that features a classic logo on the chest.<br><br><br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/sb-logo-skate-t-shirt-LBBxZV/DC7818-100" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/23d7a9bc-6489-48d7-a446-a28db02f8ee5/dri-fit-standard-issue-pullover-basketball-hoodie-grJbPW.png" alt="Product 22">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Dri-FIT Standard Issue 'Pullover Basketball Hoodie'</h4></b>
+                        <hr>
+                        <p class="card-text">This sweat-wicking hoodie combines a classic look with the feel of modern performance for beyond the basketball court. It's soft, yet heavyweight, with coverage that's ready to go right out of your gym bag.<br><br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/dri-fit-standard-issue-pullover-basketball-hoodie-grJbPW/DQ5819-027" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                
+                <div class="card custom-fcard product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0f28a4c2-ddc1-4ff5-8239-84ddf45882bf/solo-swoosh-french-terry-trousers-gpkcLc.png" alt="Product 23">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Solo Swoosh 'French Terry Trousers'</h4></b>
+                        <hr>
+                        <p class="fcard-text">These soft fleece trousers are made for comfort and laid-back, nostalgic style. They're roomy through the seat and thighs, then slightly taper to the cuffed ankle. A soft elastic waistband and inner drawcord keep them comfy where it counts. The embroidered Swoosh on the left thigh gives you a clean, effortless finish.</p>
+                        <a href="https://www.nike.com/ph/t/solo-swoosh-french-terry-trousers-gpkcLc/DX0816-010" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                                               
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9af93889-1f2d-4fff-bb79-52d50d02ba8d/jordan-dri-fit-sport-diamond-shorts-TcL0vg.png" alt="Product 24">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Jordan Dri-FIT Sport 'Diamond Shorts'</h4></b>
+                        <hr>
+                        <p class="card-text">You ready to ball? Made from light, breathable mesh with sweat-wicking technology, these shorts set you up with versatile wearability for your whole day, on or off the court.<br><br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/jordan-dri-fit-sport-diamond-shorts-TcL0vg/DX1487-687" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>   
+                <div class="card custom-scard product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/98950d26-3722-4311-bb90-1d8b961dd3e9/jordan-flight-fleece-shorts-79mmdN.png" alt="Product 25">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Jordan Flight Fleece 'Shorts'</h4></b>
+                        <hr>
+                        <p class="scard-text">These relaxed shorts are versatile, soft and ready for action. Tonal, stitched-down trim inspired by one of MJ's pro kits elevates the look of plush, fleecy comfort.<br><br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/jordan-flight-fleece-shorts-79mmdN/DQ7472-010" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                                                                                                                                         
+                <div class="card custom-tcard product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/687a84ca-f16e-4cbf-8857-a0a430799b71/jordan-flight-essentials-oversized-t-shirt-C7XVkQ.png" alt="Product 26 Image">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Jordan Flight Essentials 'Oversized T-Shirt'</h4></b>
+                        <hr>
+                        <p class="tcard-text">Designed with an intentionally oversized fit, this tee is ready for whatever the day brings. With a Jumpman woven patch on the chest, no one will question what you're about.<br><br></p>
+                        <a href="https://www.nike.com/ph/t/jordan-flight-essentials-oversized-t-shirt-C7XVkQ/DZ7313-100" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>     
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0bbb667a-5288-4538-858f-ed941fd7084d/sportswear-air-french-terry-pullover-hoodie-1r0DZb.png" alt="Product 27">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Sportswear Air 'French Terry Pullover Hoodie'</h4></b>
+                        <hr>
+                        <p class="card-text">Stay true to the history and culture of Nike Air in this French terry hoodie. Raglan sleeves and a roomy fit through the chest and body pair up with soft ribbing on the cuffs and hem for a clean, comfortable finish. The hood can be adjusted with the bungees and Nike-branded cord locks.<br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/sportswear-air-french-terry-pullover-hoodie-1r0DZb/DV9778-657" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                  
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/fe7df733-6e7e-4e61-b389-75f1c12beac8/jordan-essential-woven-trousers-slch5K.png" alt="Product 28">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Jordan Essential 'Woven Trousers'</h4></b>
+                        <hr>
+                        <p class="card-text">Flex in the Jordan Essential Woven Trousers. They're made from lightweight stretch-woven fabric that flexes for ease of movement and is textured with suede-like softness.<br><br><br><br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/jordan-essential-woven-trousers-slch5K/DA9834-010" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                 
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/97fcddee-5de4-43a5-be55-8c797af49215/jordan-23-engineered-fleece-shorts-WwzgMG.png" alt="Product 29">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Jordan 23 Engineered 'Fleece Shorts'</h4></b>
+                        <hr>
+                        <p class="card-text">Keep your cool in these 23 Engineered fleece shorts. Straightforward with an edge, they feature a stitch overlay and screen-printed graphics for visual interest. You'll stay covered and comfy, from one end of the city to the other.<br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/jordan-23-engineered-fleece-shorts-WwzgMG/DV7685-010" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div> 
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/edaa2a15-9f6d-4ad2-b67f-72f43bbf6901/jordan-23-engineered-woven-shorts-nSXKmP.png" alt="Product 30">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Jordan 23 Engineered 'Woven Shorts'</h4></b>
+                        <hr>
+                        <p class="card-text">Spring into summer mode with these lightweight shorts. Textured nylon fabric and curved zip pockets make 'em the perfect pairing of looks and utility.<br><br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/jordan-23-engineered-woven-shorts-nSXKmP/DX9653-010" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                                                                                                                                                      
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: center;">    
+            <a href="https://www.nike.com/ph/w/clothing-6ymx6" target="_blank" class="see-more-btn btn btn-danger">See More...</a>
+        </div>
+        
+    </section>
+
+    <!-- Accessories -->
+    <section id="products_accessories" class="container">
+        <div class="jumbotron text-center">
+            <h1>Accessories</h1>
+        </div>
+        <div class="container">
+            <div class="card-columns">
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3b9cdbbd-cfbe-4fb0-8ca3-8560df41b287/acg-aysen-day-pack-2XPr4k.png" alt="Product 31">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike ACG Aysén 'Day Pack'</h4></b>
+                        <hr>
+                        <p class="card-text">Your best outdoor experiences require the right gear. Durable yet flexible Dyneema® material runs through the roll top of the bag so it stays in 1 piece, roll after roll, use after use. Tons of expandable internal storage, a magnetic button closure, clips for carabiners and a sternum strap give you the tools you need for a day hike or your daily commute.<br><br></p>
+                        <a href="https://www.nike.com/ph/t/acg-aysen-day-pack-2XPr4k/DV4054-100" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                                                            
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/58cda43a-c817-4afe-a5a9-4a8070b42704/heritage-cross-body-bag-H57GpC.png" alt="Product 32">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Heritage 'Cross-Body Bag'</h4></b>
+                        <hr>
+                        <p class="card-text">An alternative to the classic hip pack style, the Nike Heritage Cross-Body Bag offers hands-free storage in a design you wear across the chest. A Futura logo print and easy-to-adjust strap make it a smart pick for everyday use. The main storage pocket and accessories pocket help keep your gear organised. This product is made from at least 65% recycled polyester.</p>
+                        <a href="https://www.nike.com/ph/t/heritage-cross-body-bag-H57GpC/DB0456-010" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                               
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3c6950b8-c495-4f05-b893-52fe5f2b3a75/dri-fit-club-structured-swoosh-cap-LLtHBx.png" alt="Product 33">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Dri-FIT Club 'Structured Swoosh Cap'</h4></b>
+                        <hr>
+                        <p class="card-text">Open the doors for the Club Cap. The structured, mid-depth crown keeps you feeling comfortable and secure. Sweat-wicking fabric helps keep you dry and a tri-glide closure makes sure you're ready to go from 1 activity to the next with a fit that's just right.</p>
+                        <a href="https://www.nike.com/ph/t/dri-fit-club-structured-swoosh-cap-LLtHBx/FB5625-025" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>
+                <div class="card custom-pcard product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7e7bf530-dbd5-4351-b1b7-c9e9633a27bc/jordan-pro-jumpman-snapback-hat-KbPBND.png" alt="Product 34">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Jordan Pro Jumpman 'Snapback Hat'</h4></b>
+                        <hr>
+                        <p class="pcard-text">Show them your hops in the Jordan Pro Jumpman Snapback Hat. It has a flat bill and high structured crown made from tightly woven twill. The iconic logo is thickly embroidered on the front, a bold projection of the Brand's heritage. This product is made from at least 50% recycled polyester fibres.</p>
+                        <a href="https://www.nike.com/ph/t/jordan-pro-jumpman-snapback-hat-KbPBND/AR2118-688" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                              
+                <div class="card custom-ecard product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/413bf806-b071-46fc-a859-224df5da26d1/jordan-everyday-ankle-socks-PqW8xF.png" alt="Product 35">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Jordan 'Everyday Ankle Socks'</h4></b>
+                        <hr>
+                        <p class="ecard-text">These ankle socks will keep you dry and cool with sweat-wicking fabric and breathable ankle panels. They're snug around the arch to give you that extra-supportive feel.</p>
+                        <a href="https://www.nike.com/ph/t/jordan-everyday-ankle-socks-PqW8xF/DX9655-100" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/bbac0e18-103d-4afa-8b18-35e7e53c80bc/hike-backpack-J9xJd6.png" alt="Product 36">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Hike 'Backpack'</h4></b>
+                        <hr><p>Get outdoor-ready with the Nike Hike Backpack, a versatile bag that can go from storing school gear to day hiking on your local trail. A large main compartment makes storage simple, and a zip front pocket keeps your small gear easy to access. Extra support lives in the padded shoulder straps that are adjustable and feature an adjustable sternum clasp to help distribute the weight while you walk.</p>
+                        <a href="https://www.nike.com/ph/t/hike-backpack-J9xJd6/DJ9677-010" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                 
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7f86e40c-53cd-45a3-ad1d-c3468a664651/heritage-retro-hip-pack-h7xSHW.png" alt="Product 37">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Heritage 'Retro Hip Pack'</h4></b>
+                        <hr>
+                        <p class="card-text">With classic style on display, the Nike Hip Pack is small but mighty. It has a sizeable compartment for all the essentials when bulky bags won't work. The adjustable strap features 2 clips on each end. Bonus: The zip on this bag features a Swoosh logo pull, giving it an iconic touch.<br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/heritage-retro-hip-pack-h7xSHW/DR6266-010" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                 
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2164b6cc-f416-4c0d-9d1e-7440eac43a08/jordan-jumpman-heritage86-washed-cap-f59xF8.png" alt="Product 38">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Jordan Jumpman Heritage86 'Washed Cap'</h4></b>
+                        <hr>
+                        <p class="card-text">The Jordan Jumpman Heritage86 Cap has an unstructured crown made from lightweight twill that's washed for a worn-in look. It adjusts at the back with a strap.<br><br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/jordan-jumpman-heritage86-washed-cap-f59xF8/DC3673-010" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                 
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3c945e18-1df2-4d3f-b191-49f4a94fe60d/sportswear-bucket-hat-pnF01f.png" alt="Product 39">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Sportswear 'Bucket Hat'</h4></b>
+                        <hr>
+                        <p class="card-text">A washed fabric on the crown of the Nike Sportswear Bucket Hat gives it a soft, well-worn feel.Its unstructured crown and brim offer a laidback look and added coverage from the elements.<br><br><br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/sportswear-bucket-hat-pnF01f/DC3967-010" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/dfa68bbe-e102-4e33-9b6e-6763e2a75f19/everyday-cushioned-training-crew-socks-3-pairs-3wbzKz.png" alt="Product 40">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Everyday Cushioned 'Training Crew Socks'</h4></b>
+                        <hr>
+                        <p class="card-text">Power through your workout with the Nike Everyday Cushioned Socks. Sweat-wicking technology helps to keep you dry and cool, while the thick terry sole gives you comfort for those intense lifts and extra miles. The banded arch feels snug and supportive around your foot. 3 pair packaging means you always have a backup plan.</p>
+                        <a href="https://www.nike.com/t/everyday-cushioned-training-crew-socks-3-pairs-3wbzKz/SX7664-100" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/e8ef28be-6ece-4e7c-a289-894a9e6e30d1/hoops-elite-duffel-bag-V8Kqlc.png" alt="Product 41">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Hoops Elite 'Duffel Bag'</h4></b>
+                        <hr>
+                        <p class="card-text">Wherever your game takes you, take the gear you need to succeed. The Nike Hoops Elite Duffel Bag has plenty of room for all the gear you need on and off the court, including a ventilated zipped bottom compartment to store your favourite pair of sneakers. Throw it onto your shoulder or grab the dual handles and get going to your favourite local court to swish that half-court shot.</p>
+                        <a href="https://www.nike.com/ph/t/hoops-elite-duffel-bag-V8Kqlc/DX9789-010" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                
+                <div class="card custom-bcard product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c1d7c60d-2928-4874-826c-d796e00e6d8b/basketball-essentials-cross-body-bag-d2SBsn.png" alt="Product 42">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Basketball Essentials 'Cross-Body Bag'</h4></b>
+                        <hr>
+                        <p class="bcard-text">Whether it's a game of streetball with friends or hitting the local gym, this bag helps keep you on the go and hands free. 2 separate compartments help organise your phone, keys and cards.</p>
+                        <a href="https://www.nike.com/ph/t/basketball-essentials-cross-body-bag-d2SBsn/DZ6891-010" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>   
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/04ad1035-97aa-4f1a-8f77-ec55f4f2ecf1/sportswear-heritage86-futura-washed-hat-9zdC2m.png" alt="Product 43">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Sportswear Heritage86 Futura Washed 'Hat'</h4></b>
+                        <hr>
+                        <p class="card-text">Crafted from soft fabric, the Nike Sportswear Heritage86 Futura Washed Hat has a 6-panel design for classic comfort, and an adjustable closure for a personalised fit.<br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/sportswear-heritage86-futura-washed-hat-9zdC2m/913011-010" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                                                                
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/e52c9015-424a-4d7b-9bca-da9a189a1a01/sportswear-beanie-vvLQvd.png" alt="Product 44">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Sportswear 'Beanie'</h4></b>
+                        <hr>
+                        <p class="card-text">When the weather cools down, reach for the soft warmth of our classic beanie to help turn up the heat. A 3D Swoosh logo graces the cuff for dimensional detail and a clean finish.<br><br><br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/sportswear-beanie-vvLQvd/DV3342-010" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>                
+                <div class="card product-zoom">
+                    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/79408dc2-ea97-497a-82f1-f35043756821/multiplier-running-ankle-socks-mLLjFH.png" alt="Product 45">
+                    <div class="card-body">
+                        <h4 class="card-title"><b>Nike Multiplier 'Running Ankle Socks'</h4></b>
+                        <hr>
+                        <p class="card-text">The Nike Multiplier Running Ankle Socks feature sweat-wicking fabric. An arch band at the midfoot offers a comfortable, close fit ideal for different types of runs.<br><br><br><br><br><br></p>
+                        <a href="https://www.nike.com/ph/t/multiplier-running-ankle-socks-mLLjFH/SX7556-010" target="_blank" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: center;">    
+            <a href="https://www.nike.com/ph/w/accessories-equipment-awwpw" target="_blank" class="see-more-btn btn btn-danger">See More...</a>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </section>    
+
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark">
+        <p class="pfooter">Villafuerte, Brylle - [FINAL] Final Project | IT0043L</p>
+        <p class="pfooter">&copy; 2023 Nike, Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Hide transition on navigation bar
+        var previousScroll = window.pageYOffset || document.documentElement.scrollTop;
+        var nav = document.querySelector('nav');
+        var navbarToggler = document.querySelector('.navbar-toggler');
+        var navMenu = document.querySelector('.navbar-collapse');
+
+        window.addEventListener('scroll', function() {
+            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > previousScroll) {
+                nav.style.top = '-100px';
+                navMenu.classList.remove('show'); // Hide the navigation menu
+            } else {
+                nav.style.top = '0';
+            }
+            previousScroll = currentScroll;
+        });
+
+        navbarToggler.addEventListener('click', function() {
+            if (!navMenu.classList.contains('show') && window.pageYOffset > 0) {
+                nav.style.top = '-100px';
+            }
+        });     </script>
+
+</body>
+</html>
